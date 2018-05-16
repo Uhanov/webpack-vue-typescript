@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Webpack Vue Boilerplate",
   "main": "index.js",
+  "repository": "https://bitbucket.org/Uhanov/webpack-vue-boilerplate",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
