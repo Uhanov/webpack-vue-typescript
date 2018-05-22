@@ -1,6 +1,6 @@
 {
   "name": "webpack-vue-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Webpack Vue Boilerplate",
   "main": "index.js",
   "repository": "https://bitbucket.org/Uhanov/webpack-vue-boilerplate",

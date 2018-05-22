@@ -5,8 +5,8 @@ const merge = require('webpack-merge');
 
 module.exports = merge(baseWebpackConfig, {
   output: {
-    filename: '[name].[chunkhash].js',
-    chunkFilename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
