@@ -1,4 +1,3 @@
-```
 ## Webpack 4 + Vue 2 + Vue-router
 
 ### install dependencies
