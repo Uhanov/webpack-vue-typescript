@@ -4,6 +4,7 @@ const baseWebpackConfig = require('./webpack.base');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const merge = require('webpack-merge');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = merge(baseWebpackConfig, {
   output: {
@@ -18,7 +19,15 @@ module.exports = merge(baseWebpackConfig, {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
+          'sass-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: (loader) => [
+                autoprefixer()
+              ]
+            }
+          }
         ]
       }
     ]
@@ -28,8 +37,8 @@ module.exports = merge(baseWebpackConfig, {
       cacheGroups: {
         commons: {
           test: /[\\/]node_modules[\\/]/,
-          name: "vendors",
-          chunks: "all"
+          name: 'vendors',
+          chunks: 'all'
         }
       }
     }
