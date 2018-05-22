@@ -24,7 +24,7 @@ module.exports = merge(baseWebpackConfig, {
   plugins: [
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
-        messages: [`You application is running here http://${HOST}:${PORT}`]
+        messages: [`Application is running here: http://${HOST}:${PORT}`]
       },
       clearConsole: true
     }),
