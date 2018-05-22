@@ -21,6 +21,14 @@ module.exports = merge(baseWebpackConfig, {
     overlay: true,
     historyApiFallback: true
   },
+  module: {
+    rules: [
+      {
+        test: /\.(scss|css)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      }
+    ]
+  },
   plugins: [
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
@@ -28,6 +36,7 @@ module.exports = merge(baseWebpackConfig, {
       },
       clearConsole: true
     }),
+
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin()
   ],

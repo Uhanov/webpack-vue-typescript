@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
@@ -33,20 +32,6 @@ module.exports = {
         }
       },
       {
-        test: /\.(scss|css)$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
-      },
-      {
         test: /\.(png|jpg|gif|svg)$/,
         use: [
           {
@@ -62,7 +47,6 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new MiniCssExtractPlugin({ filename: 'app.[hash].css' }),
     new HtmlWebPackPlugin({
       template: 'index.html'
     })
