@@ -1,7 +1,14 @@
 {
   "name": "webpack-vue-boilerplate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Webpack Vue Boilerplate",
+  "keywords": [
+    "webpack 4",
+    "vue.js",
+    "vue-router",
+    "sass",
+    "boilerplate"
+  ],
   "main": "index.js",
   "repository": "https://bitbucket.org/Uhanov/webpack-vue-boilerplate",
   "scripts": {
@@ -14,9 +21,11 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
+    "clean-terminal-webpack-plugin": "^1.0.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
+    "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
