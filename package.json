@@ -13,13 +13,16 @@
   "repository": "https://bitbucket.org/Uhanov/webpack-vue-boilerplate",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "test": "jest"
   },
   "author": "ruvdex@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.16",
     "autoprefixer": "^8.5.0",
     "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^0.1.19",
@@ -27,6 +30,8 @@
     "file-loader": "^1.1.11",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.0.0",
+    "jest-serializer-vue": "^1.0.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
     "optimize-css-assets-webpack-plugin": "^4.0.1",
@@ -34,6 +39,7 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "vue": "^2.5.16",
+    "vue-jest": "^2.6.0",
     "vue-loader": "^15.0.11",
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.16",
@@ -46,5 +52,21 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ]
+  }
 }
