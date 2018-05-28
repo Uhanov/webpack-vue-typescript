@@ -8,7 +8,8 @@ const PORT = 8800;
 
 module.exports = merge(baseWebpackConfig, {
   output: {
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   devtool: 'eval',
   devServer: {
