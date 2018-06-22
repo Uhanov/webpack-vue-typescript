@@ -7,14 +7,6 @@ Vue.use(Router)
 
 var router = new Router({
   mode: 'history',
-  scrollBehavior: (to, from, savedPosition) => {
-    if (savedPosition) {
-      return savedPosition
-    } else if (to.name !== from.name) {
-      return { y: 0 }
-    }
-  },
-  history: true,
   routes: [
     {
       path: '/',

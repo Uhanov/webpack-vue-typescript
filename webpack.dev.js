@@ -4,7 +4,7 @@ const baseWebpackConfig = require('./webpack.base');
 const merge = require('webpack-merge');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const HOST = 'localhost';
-const PORT = 8800;
+const PORT = 8810;
 
 module.exports = merge(baseWebpackConfig, {
   output: {

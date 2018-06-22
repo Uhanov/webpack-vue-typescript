@@ -1,12 +1,13 @@
 {
-  "name": "webpack-vue-boilerplate",
-  "version": "0.0.3",
-  "description": "Webpack Vue Boilerplate",
+  "name": "webpack-vue-typescript",
+  "version": "1.0.0",
+  "description": "Webpack Vue Typescript Boilerplate",
   "keywords": [
     "webpack 4",
     "vue.js",
     "vue-router",
     "sass",
+    "typescript",
     "boilerplate"
   ],
   "main": "index.js",
@@ -38,6 +39,8 @@
     "postcss-loader": "^2.1.5",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
+    "ts-loader": "^4.4.1",
+    "typescript": "^2.9.2",
     "vue": "^2.5.16",
     "vue-jest": "^2.6.0",
     "vue-loader": "^15.0.11",

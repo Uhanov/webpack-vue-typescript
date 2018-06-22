@@ -5,12 +5,13 @@
   </section>
 </template>
 
-<script>
-import TestComponent from '@/components/TestComponent'
+<script lang="ts">
+import Vue from 'vue';
+  import TestComponent from '@/components/TestComponent'
 
-export default {
-  components: {
-    TestComponent
-  }
-}
+  export default Vue.extend({
+    components: {
+      TestComponent
+    }
+  })
 </script>

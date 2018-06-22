@@ -4,9 +4,9 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-  entry: './src/',
+  entry: './src/index.ts',
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': path.resolve('src')
@@ -20,6 +20,13 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           cacheBusting: true
+        }
+      },
+      {
+        test: /\.ts$/,
+        loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
         }
       },
       {

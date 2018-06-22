@@ -4,13 +4,14 @@
   </footer>
 </template>
 
-<script>
-export default {
-  name: 'main-footer',
-  data () {
-    return {
-      year: new Date().getFullYear()
+<script lang="ts">
+  import Vue from 'vue';
+  export default Vue.extend({
+    name: 'main-footer',
+    data () {
+      return {
+        year: new Date().getFullYear()
+      }
     }
-  }
-}
+  })
 </script>

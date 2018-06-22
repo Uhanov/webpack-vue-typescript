@@ -8,15 +8,16 @@
   </div>
 </template>
 
-<script>
-import MainNavbar from '@/components/MainNavbar'
-import MainFooter from '@/components/MainFooter'
+<script lang="ts">
+import Vue from 'vue'
+import MainNavbar from '@/components/MainNavbar.vue'
+import MainFooter from '@/components/MainFooter.vue'
 
-export default {
+export default Vue.extend({
   name: 'app',
   components: {
     MainNavbar,
     MainFooter
   }
-}
+})
 </script>
